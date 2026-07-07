@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Martina's | Cafetería Elegante</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/Martina-s/assets/index-C6Y8LCMJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/Martina-s/assets/index-BNvi_8Cq.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">Martina's</div>
+      <div class="nav-links">
+        <a href="#menu">Menú</a>
+        <a href="#historia">Historia</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <button class="btn-primary" onclick="document.getElementById('reservas').scrollIntoView({behavior: 'smooth'})">Reservar Mesa</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1>El arte del café, <br> <em>en cada taza</em>.</h1>
+        <p>Una experiencia sensorial diseñada para los paladares más exigentes, en un ambiente de calma y sofisticación.</p>
+        <button class="btn-primary hero-btn" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Ver Especialidades</button>
+      </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+      <div class="section-header">
+        <h2>Nuestras Especialidades</h2>
+        <p>Elaboradas con granos de origen único, tostados con precisión.</p>
+      </div>
+      
+      <div class="menu-grid">
+        <div class="menu-item card-hover">
+          <img src="/Martina-s/latte_art_1783432374903.png" alt="Signature Latte Art">
+          <div class="menu-item-info">
+            <div class="menu-item-header">
+              <h3>Signature Latte</h3>
+              <span class="price">$5.50</span>
+            </div>
+            <p>Espresso de tueste medio, leche texturizada, y un toque sutil de vainilla de Madagascar.</p>
+          </div>
+        </div>
+        
+        <div class="menu-item card-hover">
+          <img src="/Martina-s/pastries_1783432394157.png" alt="Artisanal Pastry">
+          <div class="menu-item-info">
+            <div class="menu-item-header">
+              <h3>Croissant de Almendras</h3>
+              <span class="price">$4.25</span>
+            </div>
+            <p>Masa madre hojaldrada, horneada al día, rellena de crema de almendras tostadas.</p>
+          </div>
+        </div>
+
+        <div class="menu-item card-hover">
+          <img src="/Martina-s/iced_coffee_1783432978231.png" alt="Iced Caramel Macchiato">
+          <div class="menu-item-info">
+            <div class="menu-item-header">
+              <h3>Iced Caramel Macchiato</h3>
+              <span class="price">$5.00</span>
+            </div>
+            <p>Doble espresso sobre hielo, leche fresca y nuestro jarabe de caramelo artesanal.</p>
+          </div>
+        </div>
+
+        <div class="menu-item card-hover">
+          <img src="/Martina-s/avocado_toast_1783432993776.png" alt="Avocado Toast">
+          <div class="menu-item-info">
+            <div class="menu-item-header">
+              <h3>Tostada de Aguacate</h3>
+              <span class="price">$8.50</span>
+            </div>
+            <p>Pan de masa madre tostado, aguacate fresco, huevo poché y un toque de microbrotes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historia Section -->
+    <section id="historia" class="historia-section">
+      <div class="historia-content">
+        <h2>Nuestra Historia</h2>
+        <p>Martina's nació de la búsqueda incansable del equilibrio perfecto entre sabor, aroma y atmósfera. Cada detalle, desde la selección de nuestros granos hasta el diseño de nuestras tazas, ha sido cuidadosamente pensado para ofrecerte un refugio de elegancia en medio del ritmo de la ciudad.</p>
+      </div>
+    </section>
+
+    <!-- Reservas Section -->
+    <section id="reservas" class="reservas-section">
+      <div class="section-header">
+        <h2>Reserva tu Mesa</h2>
+        <p>Asegura tu espacio en nuestro refugio de calma.</p>
+      </div>
+      <div class="form-container">
+        <form id="reserva-form" class="reserva-form">
+          <div class="form-group">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" required placeholder="Ej. Ana García">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fecha">Fecha</label>
+              <input type="date" id="fecha" required>
+            </div>
+            <div class="form-group">
+              <label for="hora">Hora</label>
+              <input type="time" id="hora" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="personas">Número de Personas</label>
+            <select id="personas" required>
+              <option value="1">1 Persona</option>
+              <option value="2">2 Personas</option>
+              <option value="3">3 Personas</option>
+              <option value="4">4 Personas</option>
+              <option value="5+">5 o más</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary btn-block">Confirmar Reserva</button>
+          <p id="reserva-status" class="reserva-status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto" class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3>Martina's</h3>
+          <p>La elegancia hecha café.</p>
+        </div>
+        <div>
+          <h4>Ubicación</h4>
+          <p>Av. Principal 123, Distrito Central</p>
+          <p>Lunes a Sábado: 7:00 AM - 9:00 PM</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <p>hola@martinascafe.com</p>
+          <p>+1 234 567 890</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Martina's Café. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
